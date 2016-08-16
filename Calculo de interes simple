@@ -1,0 +1,21 @@
+//Maykon Mamani Turpo
+//Calculo de interes simple
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	float c,i,a,in;
+	cout<<"Ingrese su capital: ";
+	cin>>c;
+	cout<<"Ingrese el interes simple: ";
+	cin>>i;
+	cout<<"Ingrese el plazo en año";
+	cin>>a;
+	in=(c*(i/100)*a);
+	cout<<"El interes es: "<<in;
+	getch();
+}
