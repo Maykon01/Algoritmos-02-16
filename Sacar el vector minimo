@@ -1,0 +1,64 @@
+//Minimo vector
+//Maykon Mamani Turpo
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+#define MAX 100
+
+using namespace std;
+
+void cargarvector(int a[], int tam);
+void mostrarvector(int a[], int tam);
+int minimovector(int a[], int tam);
+
+void main()
+{
+int tam;
+int a[MAX];
+int min;
+do
+{
+cout<<"ingrese el valor de tam: ";
+cin>>tam;
+}while((tam<=0)||(tam>MAX));
+cargarvector(a,tam);
+mostrarvector(a,tam);
+min=minimovector(a,tam);
+cout<<"el numero menor es: "<<min<<endl;
+getch();
+}
+
+void cargarvector(int a[], int tam)
+{
+
+for(int i=0; i<tam; i++)
+{
+cout<<"ingrese a["<<i<<"]= ";
+cin>>a[i];
+}
+
+}
+
+void mostrarvector(int a[], int tam)
+{
+for(int i=0; i<tam; i++)
+{
+cout<<"a["<<i<<"]= ";
+cout<<a[i]<<endl;
+}
+}
+
+int minimovector(int a[], int tam)
+{
+int min;
+min=a[0];
+for(int i=0; i<tam; i++)
+{
+if(a[i] < min)
+{
+min=a[i];
+}
+}
+return min;
+}
